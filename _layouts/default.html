@@ -39,9 +39,21 @@
           <a href="https://www.linkedin.com/in/dianakakoma" class="icon brands fa-linkedin"><span class="button">LinkedIn</span></a>
           
          <a href="https://www.linkedin.com/in/dianakakoma" class="button"> </a>
+          
+          <!--BLOG POSTS -->
+          <div id="home">
+            <h1>Blog Posts</h1>
+            <ul class="posts">
+              {% for post in site.posts %}
+                <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+          
           <!-- <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:6642799914675957760" width="100%" frameborder="0" allowfullscreen="" title="Embedded post"></iframe> -->
           <!-- <a href="#" class="button"> </a> -->
-          <!-- <
+          
+          <!-- 
 
           <p class="repo-owner"><a href="https://github.com/jasonlong/architect-theme">architect-theme</a> is maintained by <a href="https://github.com/jasonlong">jasonlong</a>.</p>
 
